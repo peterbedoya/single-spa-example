@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  root-config-spa:
+    image: root-config-spa
+    build: ./root-config-spa/
+    ports:
+      - 9000:9000
+
+  dashboard-spa:
+    image: dashboard-spa
+    build: ./dashboard-spa/
+    ports:
+      - 4201:4201
+
+  checkout-spa:
+    image: checkout-spa
+    build: ./checkout-spa/
+    ports:
+      - 4202:4202
+
+  authentication-spa:
+    image: authentication-spa
+    build: ./authentication-spa/
+    ports:
+      - 4203:4203

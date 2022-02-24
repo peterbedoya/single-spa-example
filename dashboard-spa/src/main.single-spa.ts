@@ -25,6 +25,19 @@ const lifecycles = singleSpaAngular({
   NgZone,
 });
 
-export const bootstrap = lifecycles.bootstrap;
-export const mount = lifecycles.mount;
-export const unmount = lifecycles.unmount;
+let msg=`dashboard-spa => Ejecutado mEtodo`;
+
+export function bootstrap(props) {
+  console.log(`${msg} @bootstrap`);
+  return lifecycles.bootstrap;
+}
+
+export function mount(props) {
+  console.log(`${msg} @mount`);
+  return lifecycles.mount;
+}
+
+export function unmount(props) {
+  console.log(`${msg} @unmount`);
+  return lifecycles.unmount;
+}

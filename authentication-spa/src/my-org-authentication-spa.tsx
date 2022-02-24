@@ -13,4 +13,19 @@ const lifecycles = singleSpaReact({
   },
 });
 
-export const { bootstrap, mount, unmount } = lifecycles;
+let msg=`authentication-spa => Ejecutado mEtodo`;
+
+export function bootstrap(props) {
+  console.log(`${msg} @bootstrap`);
+  return lifecycles.bootstrap(props);
+}
+
+export function mount(props) {
+  console.log(`${msg} @mount`);
+  return lifecycles.mount(props);
+}
+
+export function unmount(props) {
+  console.log(`${msg} @unmount`);
+  return lifecycles.unmount(props);
+}
